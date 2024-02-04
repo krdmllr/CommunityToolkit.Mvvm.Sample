@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiCommunityToolkitMvvmSample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:blazor="clr-namespace:MauiCommunityToolkitMvvmSample.Blazor"
+    xmlns:notes="clr-namespace:MauiCommunityToolkitMvvmSample.Notes"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MauiApp1">
+    <TabBar>
+        <Tab Title="Maui: Notes">
+            <ShellContent
+            Title="Notes"
+            ContentTemplate="{DataTemplate notes:NoteListPage}"
+            Route="Notes" />    
+        </Tab>
+        <Tab Title="Blazor: Counter">
+            <ShellContent
+            Title="Blazor"
+            ContentTemplate="{DataTemplate blazor:BlazorPage}"
+            Route="Blazor" />
+        </Tab>
+    </TabBar>
+</Shell>
